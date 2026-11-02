@@ -1,3 +1,4 @@
+
 {
   "name": "GV Audio Vision",
   "short_name": "GV Audio",
@@ -5,19 +6,20 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#071629",
-  "theme_color": "#102c4c",
+  "background_color": "#081426",
+  "theme_color": "#102747",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "./icon-192.png",
+      "src": "./your_event_our_equipment_192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./icon-512.png",
+      "src": "./your_event_our_equipment_512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ]
 }
+
