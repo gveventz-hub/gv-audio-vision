@@ -3,79 +3,347 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-  <title>GV Audio Vision</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102747">
+  <meta name="description" content="GV Audio Vision - Professional Audio, Lighting and Event Equipment Rental.">
+
+  <title>GV Audio Vision | Event Equipment Rental</title>
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./your_event_our_equipment_192.png">
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
       background: #081426;
       color: white;
+      line-height: 1.6;
     }
+
     header {
-      padding: 22px;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background: #102747;
-      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    header h1 {
-      color: #36aaff;
-      font-size: 38px;
-      margin: 0;
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      color: #f3c96b;
     }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 14px;
+      font-size: 13px;
+    }
+
     .hero {
-      padding: 35px 20px;
+      padding: 85px 7%;
       text-align: center;
+      background: linear-gradient(135deg, #102747, #174c76);
     }
-    .hero h2 {
-      font-size: 28px;
+
+    .hero h1 {
+      font-size: clamp(32px, 7vw, 52px);
+      line-height: 1.2;
+      margin-bottom: 20px;
     }
-    .categories {
+
+    .hero h1 span {
+      color: #f3c96b;
+    }
+
+    .hero p {
+      color: #d3dfec;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f3c96b;
+      color: #081426;
+      padding: 13px 23px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 55px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 29px;
+      margin-bottom: 30px;
+      color: #f3c96b;
+    }
+
+    .equipment-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      padding: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 17px;
     }
-    .category {
-      background: #16345a;
-      padding: 22px 10px;
+
+    .equipment-card {
+      background: #142b47;
+      padding: 25px 12px;
+      text-align: center;
       border-radius: 12px;
+      border: 1px solid #294463;
+    }
+
+    .equipment-card .emoji {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .equipment-card h3 {
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .equipment-card p {
+      font-size: 13px;
+      color: #bdcddd;
+    }
+
+    .booking {
+      background: #102747;
+    }
+
+    .booking-form {
+      max-width: 550px;
+      margin: auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 7px;
+      border: 1px solid #45617f;
+      background: #081426;
+      color: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aab9ca;
+    }
+
+    .booking-form button {
+      font-size: 16px;
+    }
+
+    .contact {
       text-align: center;
     }
+
+    .contact p {
+      margin-bottom: 20px;
+      color: #cbd7e5;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
-      color: #a9c9e9;
+      background: #050e1b;
+      color: #aab9ca;
+      font-size: 13px;
+    }
+
+    @media(max-width: 450px) {
+      nav a {
+        margin-left: 7px;
+        font-size: 11px;
+      }
+      .logo {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>GV.</h1>
-    <p>GV AUDIO VISION</p>
-  </header>
 
-  <section class="hero">
-    <h2>Make Your Event Amazing!</h2>
-    <p>Professional Event Equipment On Rent</p>
-  </section>
+<header>
+  <div class="logo">GV AUDIO VISION</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#equipment">Equipment</a>
+    <a href="#booking">Booking</a>
+  </nav>
+</header>
 
-  <h2 style="padding-left:18px">
-    Explore Categories
-  </h2>
+<section class="hero" id="home">
+  <h1>Your Event.<br><span>Our Equipment.</span></h1>
+  <p>Professional Audio, Lighting & Event Equipment Rental</p>
+  <a href="#equipment" class="btn">Explore Equipment</a>
+</section>
 
-  <section class="categories">
-    <div class="category">🔊<br>Sound Systems</div>
-    <div class="category">💡<br>Lighting</div>
-    <div class="category">🏗️<br>Stage & Frames</div>
-    <div class="category">📽️<br>Projectors & TVs</div>
-    <div class="category">🎤<br>Microphones</div>
-    <div class="category">🎧<br>Accessories</div>
-  </section>
+<section id="equipment">
+  <h2 class="section-title">Our Equipment</h2>
 
-  <footer>
-    © GV Audio Vision
-    <p>Your Event. Our Equipment.</p>
-  </footer>
+  <div class="equipment-grid">
+
+    <div class="equipment-card">
+      <div class="emoji">🔊</div>
+      <h3>Speakers</h3>
+      <p>Professional sound systems</p>
+    </div>
+
+    <div class="equipment-card">
+      <div class="emoji">🎤</div>
+      <h3>Microphones</h3>
+      <p>Wired and wireless microphones</p>
+    </div>
+
+    <div class="equipment-card">
+      <div class="emoji">🎚️</div>
+      <h3>Mixers</h3>
+      <p>Audio mixing equipment</p>
+    </div>
+
+    <div class="equipment-card">
+      <div class="emoji">🎧</div>
+      <h3>DJ Equipment</h3>
+      <p>DJ and music equipment</p>
+    </div>
+
+    <div class="equipment-card">
+      <div class="emoji">💡</div>
+      <h3>Stage Lighting</h3>
+      <p>Professional event lighting</p>
+    </div>
+
+    <div class="equipment-card">
+      <div class="emoji">🎪</div>
+      <h3>Event Accessories</h3>
+      <p>Additional event equipment</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <h2 class="section-title">Book Your Event</h2>
+
+  <form class="booking-form" id="bookingForm">
+
+    <input type="text" id="name"
+      placeholder="Your Name" required>
+
+    <input type="tel" id="phone"
+      placeholder="Your Phone Number" required>
+
+    <select id="event" required>
+      <option value="">Select Event Type</option>
+      <option>Wedding</option>
+      <option>Birthday Party</option>
+      <option>Corporate Event</option>
+      <option>DJ Event</option>
+      <option>College Function</option>
+      <option>Other</option>
+    </select>
+
+    <input type="date" id="date" required>
+
+    <input type="text" id="location"
+      placeholder="Event Location" required>
+
+    <textarea id="details"
+      placeholder="Equipment required and other details"></textarea>
+
+    <button type="submit" class="btn">
+      Send Booking Enquiry
+    </button>
+
+  </form>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">Contact GV Audio Vision</h2>
+  <p>Need equipment for your next event? Contact us directly.</p>
+
+  <a class="btn" id="whatsappLink"
+    href="#" target="_blank" rel="noopener">
+    Chat on WhatsApp
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 GV Audio Vision. All Rights Reserved.</p>
+  <p>Your Event. Our Equipment.</p>
+</footer>
+
+<script>
+  // Replace with your WhatsApp number.
+  // Include country code, without + or spaces.
+  const WHATSAPP_NUMBER = "91YOURNUMBER";
+
+  document.getElementById("whatsappLink").href =
+    "https://wa.me/" + WHATSAPP_NUMBER;
+
+  document.getElementById("bookingForm")
+    .addEventListener("submit", function(e) {
+
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const event = document.getElementById("event").value;
+      const date = document.getElementById("date").value;
+      const location = document.getElementById("location").value;
+      const details = document.getElementById("details").value;
+
+      const message =
+        "GV AUDIO VISION - BOOKING ENQUIRY\n\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Event: " + event + "\n" +
+        "Date: " + date + "\n" +
+        "Location: " + location + "\n" +
+        "Requirements: " + details;
+
+      const url =
+        "https://wa.me/" + WHATSAPP_NUMBER +
+        "?text=" + encodeURIComponent(message);
+
+      window.open(url, "_blank");
+    });
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker.register("./sw.js")
+        .catch(function(error) {
+          console.log("Service worker:", error);
+        });
+    });
+  }
+</script>
+
 </body>
 </html>
+
