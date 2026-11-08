@@ -1,7 +1,7 @@
 
 {
-  "name": "GV Audio Vision",
-  "short_name": "GV Audio",
+  "name": "GV",
+  "short_name": "GV Audio Vision",
   "description": "Professional Event Equipment Rental",
   "start_url": "./",
   "scope": "./",
